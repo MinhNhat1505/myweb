@@ -1,63 +1,16 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Try it yourself editor</title>
-		<style type="text/css">
-			textarea, iframe {
-    			border: 2px solid #ddd;
-    			height: 500px;
-    			width: 100%;	  
-			}
-
-            input {
-                float: right;
-                border: none;
-                background-color: crimson;
-                color: white;
-                padding: 15px 35px;
-                cursor: pointer;
-                opacity: 0.8;
-            }
-
-            input:hover {
-                opacity: 1;
-            }
-
-            .back {
-                width: 130px;
-                height: 46px;
-                cursor: pointer;
-                background-color: crimson;
-                color: white;
-                text-align: center;
-                line-height: 46px;
-                opacity: 0.8;
-            }
-
-            .back:hover {
-                opacity: 1;
-            }
-    	</style>
-
-        <script>
-            function runCode()
-            {
-                var content = document.getElementById('sourceCode').value;
-                var iframe = document.getElementById('targetCode');
-                iframe = (iframe.contentWindow) ? iframe.contentWindow : (iframe.contentDocument.document) ? iframe.contentDocument.document : iframe.contentDocument;
-                iframe.document.open();
-                iframe.document.write(content);
-                iframe.document.close();
-                return false;
-            };
-        </script>
+		<title>Bài 1</title>
+		<link rel="stylesheet" href="../css/tryItEditor.css">
+        <script src="../js/tryItEditor.js"></script>
 	</head>
     <body>
         <table width="100%" border="0" cellspacing="5" cellpadding="5">
             <thead>
                 <tr>    
                     <th width="50%">
-                        <a href="../web.html"><div class="back">Go back</div></a>
+                        <a href="../web.html" class="back">Go back</a>
                     </th>
                     <th width="50%">
                         <input onclick="runCode();" type="button" value="Run Code">
@@ -72,7 +25,7 @@
                             <strong>Code</strong> 
                             <!--ghi code ở dưới đây-->
                             <textarea name="sourceCode" id="sourceCode">
-                                <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">

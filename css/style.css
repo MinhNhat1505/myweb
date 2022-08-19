@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+:root {
+    --myNav-height :50px;
+}
+
 html{
     font-size: 10px;
     font-family: 'Montserrat',sans-serif;
@@ -22,9 +26,35 @@ a{
     justify-content: center;
     align-items: center;
 }
-/*Header*/
-/*End header*/
 
+.row {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.col {
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.col-full {
+    width: 100%;
+}
+
+.col-second {
+    width: 50%;
+}
+
+.col-third {
+    width: 33.3333%;
+}
 /* Hero section */
 #hero{
     background-image: url('../images/bg.jpg');

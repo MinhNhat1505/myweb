@@ -1,0 +1,28 @@
+.my-navbar {
+    position: fixed;
+    width: 100%;
+    height: var(--myNav-height);
+    background-color: #3a3b3c;
+    z-index: 2;
+}
+
+.my-navbar a {
+    text-decoration: none;
+}
+.my-navbar .my-nav-item ul {
+    display: flex;
+    padding: 0px;
+}
+
+.my-navbar .my-nav-item li {
+    line-height: var(--myNav-height);
+    list-style: none;
+    padding: 0px 15px;
+    margin-left: -8px;
+    font-size: 20px;
+    color: white;
+}
+
+.my-navbar .my-nav-item li:hover {
+    background-color: rgb(253,253,253, 0.3) ;
+}
