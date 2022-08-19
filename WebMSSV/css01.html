@@ -1,0 +1,72 @@
+
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>CSS 1</title>
+		<link rel="stylesheet" href="../css/tryItEditor.css">
+        <script src="../js/tryItEditor.js"></script>
+	</head>
+    <body>
+        <table width="100%" border="0" cellspacing="5" cellpadding="5">
+            <thead>
+                <tr>    
+                    <th width="50%">
+                        <a href="../css.html" class="back">Go back</a>
+                    </th>
+                    <th width="50%">
+                        <input onclick="runCode();" type="button" value="Run Code" class="run-code">
+                    </th>
+                </tr>
+            </thead>
+            
+            <tbody>
+                <tr>
+                    <td> 
+                        <form>
+                            <strong>Code</strong> 
+                            <!--ghi code ở dưới đây-->
+                            <textarea name="sourceCode" id="sourceCode">
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS 1</title>
+        <style>
+            body {
+            color:#000000;
+            background-color:#ffffff;
+            font-family:arial, verdana, sans-serif; 
+        }
+            h1{color: blue;}
+            p.one {
+                font-family:arial; 
+                background-color: yellow;}
+            p.two {
+                font-family:times new roman; 
+                background-color: gray;
+            }
+            p.three {
+                font-family:courier;
+                font-weight:900;
+                font-size:20px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Font và nền</h1>
+        <p class="one">Đây là đoạn văn bản sử dụng font sans-serif font, nền màu vàng.</p>
+        <p class="two">Đây là đoạn văn bản sử dụng font serif, nền màu xám.</p>
+        <p class="three">Đây là đoạn văn bản sử dụng font monospaced.</p>
+    </body>
+</html>
+                            </textarea>
+                        </form>
+                    </td>
+                    <td><strong>Output</strong><iframe name="targetCode" id="targetCode"></iframe></td>
+                </tr>
+            </tbody>
+        </table>  
+    </body>
+</html>

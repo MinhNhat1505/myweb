@@ -9,7 +9,7 @@ textarea, iframe {
     width: 100%;	  
 }
 
-input {
+.run-code {
     float: right;
     border: none;
     background-color: crimson;
@@ -19,7 +19,7 @@ input {
     opacity: 0.8;
 }
 
-input:hover {
+.run-code:hover {
     opacity: 1;
 }
 
