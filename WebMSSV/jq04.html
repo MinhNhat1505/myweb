@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Document</title>
+    <style>
+        div {
+            width: 60px;
+            height: 60px;
+            margin: 5px;
+            float: left;
+        }
+
+        .square:hover {
+            cursor: pointer;
+        }
+
+        p {
+            clear: left;
+        }
+        .result {
+            width: 300px;
+            height: 100px;
+            border: 1px solid #ccc;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function(){
+            $(".square").click(function(){
+                var color = $(this).css("background-color");
+                var name;
+                switch(color)
+                {
+                    case "rgb(255, 0, 0)" : name="Đỏ"; console.log("a"); break;
+                    case "rgb(0, 0, 255)" : name="Xanh dương"; break;
+                    case "rgb(0, 255, 0)" : name="Xanh lá"; break;
+                    case "rgb(255, 0, 255)" : name="Tím"; break;
+                }
+                console.log(name); 
+                $(".kq").html("Màu bạn chọn là " + name + ": " + color)
+                $(".kq").css ({
+                    'margin-top' : '10px',
+                    'color' : color,
+                    'font-weight' : 'bold'
+                });
+                $(".result").css({'background-color': color});                
+            })
+        })
+    </script>
+</head>
+<body>
+    <p>Click lên các hình vuông</p>
+    <div class="square" style="background-color:rgb(255,0,0);"></div>
+    <div class="square" style="background-color:rgb(0,0,255);"></div>
+    <div class="square" style="background-color:rgb(0,255,0);"></div>
+    <div class="square" style="background-color:rgb(255,0,255);"></div>
+    <br>
+    <p class="kq"></p>
+    <div class="result"></div>
+</body>
+</html>

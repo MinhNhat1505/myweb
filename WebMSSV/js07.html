@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS07</title>
+    <script src="../js/js07.js"></script>
+</head>
+<body>
+    <table>
+        <caption><h2 id="title">CHƯƠNG TRÌNH XỬ LÝ CHUỖI</h2></caption>
+        <tbody>
+            <tr>
+                <td>Chuỗi S1:</td>
+                <td><input type="text" id="s1"></td>
+            </tr>
+            <tr>
+                <td>Chuỗi S2:</td>
+                <td><input type="text" id="s2"></td>
+            </tr>
+            <tr>
+                <td>Chuỗi S3:</td>
+                <td><input type="text" id="s3"></td>
+            </tr>
+            <tr>
+                <td>Vị trí chèn:</td>
+                <td><input type="text" id="txtPos"></td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td></td>
+                <td>
+                    <button onclick="normal()">Chuẩn hóa chuỗi</button>
+                    <button onclick="reverse()">Đảo chuỗi</button>
+                    <button onclick="reset()">Khôi phục</button>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button onclick="replaceAll()">Thay thế S2 bằng S3</button>
+                    <button onclick="insert()">Chèn S2 vào S1</button>
+                    <button onclick="delAll()">Xóa S2 trong S1</button>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+    <script>
+        const strOrigin = document.getElementById("s1").value;
+        setInterval(xoayChu(),1000);
+    </script>
+</body>
+</html>

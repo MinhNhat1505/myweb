@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>jquery02</title>
+
+    <script>
+        $(document).ready(function(){
+            $("#btTotal").click(function(){
+                var t1 = $("#fromDay").val();
+                console.log(t1);
+                var t2 = $("#toDay").val();
+                d1 = new Date(t1);
+                d2 = new Date(t2);
+                var miliSecondOfDay = 3600 * 24 * 1000;
+                var soNgay = (d2.getTime() - d1.getTime()) / miliSecondOfDay;
+                console.log(soNgay)
+                $("#result").text(soNgay);
+            })
+        })
+    </script>
+</head>
+<body>
+    <table>
+        <caption>Tính số ngày giữa hai thời điểm</caption>
+        <tr>
+            <td>
+                <label for="fromDay">Từ ngày</label>
+                <input type="date" id="fromDay">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="toDay">tới ngày</label>
+                <input type="date" id="toDay">
+            </td>
+        </tr>
+        <tr>
+            <td><button id="btTotal">Tính số ngày</button></td>
+        </tr>
+    </table>
+    <p>Số ngày là <span id="result"></span></p>
+</body>
+</html>

@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+.text-white {
+    color: white;
+}
+
+:root {
+    --header-height:120px;
+    --nav-height:30px
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header  */
+    /* Banner  */
+header .banner {
+    width: 100%;
+    height: var(--header-height);
+    background-image: url(../images/backgrd.png);
+    font-size: 2.5em;
+    color: #ffff00;
+    text-align: center;
+    text-shadow: 5px 5px 3px red;
+    line-height: var(--header-height);
+    text-transform: uppercase;
+}
+
+    /* Navbar  */
+header .navbar {
+    height: var(--nav-height) ;
+    line-height: calc(var(--nav-height) - 2px);
+    margin-top: 15px;
+    background-color: #03c9a9;
+}
+
+.navbar ul {
+    list-style: none;
+    text-align: center;
+}
+
+.navbar>ul>li {
+    display: inline-block;
+}
+
+.navbar ul li {
+    padding: 0 25px;
+    border: 1px dotted #333;
+    background-color: #049372;
+}
+    /* Subnav  */
+.sub-nav {
+    position: absolute;
+    display: none;
+    margin-left: -26px;
+    padding: 0;
+    float: left;
+}
+
+.sub-nav>li {
+    text-align: left;
+    padding: 0 30px 0 5px !important;
+}
+
+.navbar>ul>li:nth-last-of-type(2):hover {
+    background-color: #03a678;
+}
+
+.navbar>ul>li:nth-last-of-type(2):hover>.sub-nav {
+    display: block;
+}
+/* End header  */
+
+/* Container  */
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.left,
+.right {
+    width:15%;
+    min-height: 650px;
+    background-color: cyan;
+}
+
+.container .content {
+    width: 70%;
+    min-height: 650px;
+}
+
+.content>div {
+    display: flex;
+    flex-direction: row;
+    overflow: scroll;
+}
+
+.content>div>div {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 325px;
+    border: 1px dashed #333;
+    margin: 0 5px 5px;
+    background-color: #ffff00;
+    overflow: scroll;
+}
+/* End container  */
+
+/* Footer  */
+footer {
+    margin-top: 5px;
+    background-color: blue;
+    color: yellow;
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+}

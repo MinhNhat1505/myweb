@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Try it yourself editor</title>
+		<style type="text/css">
+			textarea, iframe {
+    			border: 2px solid #ddd;
+    			height: 500px;
+    			width: 100%;	  
+			}
+
+            input {
+                float: right;
+                border: none;
+                background-color: crimson;
+                color: white;
+                padding: 15px 35px;
+                cursor: pointer;
+                opacity: 0.8;
+            }
+
+            input:hover {
+                opacity: 1;
+            }
+
+            .back {
+                width: 130px;
+                height: 46px;
+                cursor: pointer;
+                background-color: crimson;
+                color: white;
+                text-align: center;
+                line-height: 46px;
+                opacity: 0.8;
+            }
+
+            .back:hover {
+                opacity: 1;
+            }
+    	</style>
+
+        <script>
+            function runCode()
+            {
+                var content = document.getElementById('sourceCode').value;
+                var iframe = document.getElementById('targetCode');
+                iframe = (iframe.contentWindow) ? iframe.contentWindow : (iframe.contentDocument.document) ? iframe.contentDocument.document : iframe.contentDocument;
+                iframe.document.open();
+                iframe.document.write(content);
+                iframe.document.close();
+                return false;
+            };
+        </script>
+	</head>
+    <body>
+        <table width="100%" border="0" cellspacing="5" cellpadding="5">
+            <thead>
+                <tr>    
+                    <th width="50%">
+                        <a href="../web.html"><div class="back">Go back</div></a>
+                    </th>
+                    <th width="50%">
+                        <input onclick="runCode();" type="button" value="Run Code">
+                    </th>
+                </tr>
+            </thead>
+            
+            <tbody>
+                <tr>
+                    <td> 
+                        <form>
+                            <strong>Code</strong> 
+                            <!--ghi code ở dưới đây-->
+                            <textarea name="sourceCode" id="sourceCode">
+                                <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diễn đàn CNTT</title>
+</head>
+<body bgcolor='yellow'>
+    <h1>DIỄN ĐÀN CNTT</h1>
+    <p>
+        Chào mừng các bạn yêu thích CNTT <br>
+        <b>
+            Hãy liên hệ chúng tôi qua <i> <a href=mailto:2151010265nhat@ou.edu.vn>email</a></i>
+        </b>
+    </p>
+</body>
+</html>
+                            </textarea>
+                        </form>
+                    </td>
+                    <td><strong>Output</strong><iframe name="targetCode" id="targetCode"></iframe></td>
+                </tr>
+            </tbody>
+        </table>  
+    </body>
+</html>

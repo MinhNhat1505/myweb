@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/js04.js"></script>
+    <title>JS04</title>
+</head>
+<body>
+    <form id="myform" onsubmit="return tinh()">
+        <table>
+            <caption>Các phép tính số học</caption>
+            <tbody>
+                <tr>
+                    <td>Số thứ nhất</td>
+                    <td><input type="text" name="first-number"></td>
+                </tr>
+                <tr>
+                    <td>Số thứ hai</td>
+                    <td><input type="text" name="second-number"></td>
+                </tr>
+                <tr>
+                    <td>chọn phép toán</td>
+                    <td>
+                        <input type="radio" name="op" value="+">Cộng<br>
+                        <input type="radio" name="op" value="-">Trừ<br>
+                        <input type="radio" name="op" value="*">Nhân<br>
+                        <input type="radio" name="op" value="/" checked>Chia
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="Thực hiện" name="btCong">
+                        <input type="reset" value="Hủy">
+                    </td>
+                    <td><input type="text" name="kq" readonly></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</body>
+</html>
