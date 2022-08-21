@@ -30,4 +30,44 @@ function reset() {
     var s1 = document.getElementById("s1").value;
     var s2 = document.getElementById("s2").value;
     var s3 = document.getElementById("s3").value;
+    var token = new RegExp(s2,"ig");
+    s1 = s1.replace(token,s3);
+    document.getElementById("s1").value = s1;
+ }
+
+ function insertAt(main_string,ins_string,pos) {
+    return main_string.slice(0,pos) + ins_string + main_string.slice(pos);
+ }
+
+ function insert() {
+    var s1 = document.getElementById("s1").value;
+    var s2 = document.getElementById("s2").value;
+    var pos = document.getElementById("txtPos").value;
+    if(pos == "")
+    {
+        alert("Vui lòng nhập vị trí cần chèn");
+        return false;
+    }
+    pos = Number(pos)
+    if(pos < 0 || pos > s1.length || isNaN(pos))
+    {
+        alert("Vị trí không hợp lệ");
+        return false;
+    }
+    if(s2 == "")
+    {
+        alert("Vui lòng nhập chuỗi 2");
+        return false;
+    }
+    var result = insertAt(s1,s2,pos);
+    if(result)
+        document.getElementById("s1").value = result;
+ }
+
+ function delAll() {
+    var s1 = document.getElementById("s1").value;
+    var s2 = document.getElementById("s2").value;
+    var token = new RegExp(s2,"ig");
+    s1 = s1.replace(token,'');
+    document.getElementById("s1").value = s1;
  }
